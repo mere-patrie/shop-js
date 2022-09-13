@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Shop</title>
+</head>
+<body>
+
+    <div id="pageLoader" class="position-fixed w-100 h-100 bg-grey " style="z-index: 2000;"><div class="spinner-border position-fixed" style="width: 350px; height: 350px; top: calc(50% - 175px); left: calc(50% - 175px);"></div></div><script>$.when( $.ready ).then(function() {$("#pageLoader").fadeOut(function(){$("#pageLoader").hide()});});</script>
+    
+    <nav class="navbar navbar-expand-lg navbar-light text-primary fixed-top bg-grey shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Acceuil</a>
+                    </li>
+                    <!-- Vêtements   -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vêtements</a>
+                        <ul class="dropdown-menu">
+                            <li><div class="separator">Hauts</div></li>
+                            <li><a class="dropdown-item" href="shop.html?q=t-shirt"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M22.69 4.723a3.017 3.017 0 0 0-1.61-2.147L16.084.08c-.006-.003-.014-.002-.02-.005A.737.737 0 0 0 15.75 0h-7.5a.737.737 0 0 0-.314.074c-.007.003-.015.002-.021.005L2.92 2.576a3.01 3.01 0 0 0-1.61 2.147L.012 11.866a.75.75 0 0 0 .738.884H4.5v10.5c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .75-.75v-10.5h3.75a.75.75 0 0 0 .738-.884L22.69 4.723zM14.892 1.5c-.335 1.29-1.5 2.25-2.893 2.25S9.442 2.79 9.107 1.5h5.786zm4.607 9.75V9A.75.75 0 0 0 18 9v13.5H6V9a.75.75 0 0 0-1.5 0v2.25H1.648l1.139-6.26c.084-.461.384-.862.805-1.072l4.07-2.035C8.168 3.814 9.912 5.25 12 5.25s3.832-1.436 4.338-3.368l4.071 2.036c.42.21.72.61.804 1.073l1.139 6.259H19.5z"></path></svg>T-shirts</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=chemise"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M18 3h-.706l-.83-2.487a.75.75 0 0 0-.711-.512h-10.5a.75.75 0 0 0-.712.512L3.713 3H3a3.003 3.003 0 0 0-3 3v14.97a3.003 3.003 0 0 0 3 3h15a3.003 3.003 0 0 0 3-3V6a3.003 3.003 0 0 0-3-3zm-1.038 3.75h-5.058l3.372-5.057 1.686 5.058zM7.404 1.5h6.198l-3.1 4.649L7.405 1.5zm-1.675.192 3.373 5.059H4.043L5.73 1.692zM1.5 20.97V6c0-.828.672-1.499 1.5-1.5h.213l-.921 2.763a.75.75 0 0 0 .71.988h6.75v14.218H3c-.828 0-1.5-.672-1.5-1.5zm18 0c0 .828-.672 1.5-1.5 1.5h-6.747V8.251h6.75a.751.751 0 0 0 .712-.988L17.794 4.5H18c.828.001 1.5.672 1.5 1.5v14.97z"></path></svg>Chemises</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=sweat"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M22.7 7.5c-.2-.8-.7-1.5-1.4-1.9L18.7 4c-.2-2.3-2.1-4-4.5-4H9.7C7.4 0 5.5 1.8 5.2 4L2.6 5.6C2 6 1.5 6.7 1.3 7.5.4 10.9 0 14.5 0 18v.7c0 1.7 1.3 3 3 3h1.6C4.9 23 6.1 24 7.5 24h9c1.4 0 2.6-1 2.9-2.2H21c1.7 0 3-1.3 3-3V18c0-3.5-.4-7.1-1.3-10.5zm-5.5-3.4-3.5 1.8 2-4c.8.4 1.4 1.2 1.5 2.2zM9.8 1.5h4.3L12 5.8 9.8 1.5zm-1.5.4 2 4-3.6-1.8c.2-1 .8-1.8 1.6-2.2zm14.2 16.9c0 .8-.7 1.5-1.5 1.5h-1.5v-9.7c0-.4-.3-.8-.8-.8-.4 0-.8.3-.8.8V21c0 .8-.7 1.5-1.5 1.5h-9c-.7 0-1.4-.7-1.4-1.5V10.5c0-.4-.3-.8-.8-.8-.4 0-.8.3-.8.8v9.7H2.9c-.4 0-.8-.1-1.1-.4-.3-.3-.4-.7-.4-1.1V18c0-3.4.4-6.8 1.3-10.2.1-.4.3-.7.7-.9L6 5.4l3 1.5v4.4c0 .4.3.7.7.7.4 0 .7-.3.7-.8V7.6l1.2.6c.1 0 .2.1.3.1.1 0 .2 0 .3-.1l1.2-.6v3.7c0 .4.3.7.8.7.4 0 .7-.3.7-.8V6.8l3-1.5 2.6 1.6c.3.2.6.5.7.9.8 3.3 1.3 6.7 1.3 10.2v.8z"></path></svg>Sweats</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=survetement"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.248 0h-7.497a.751.751 0 0 0-.747.814A7.732 7.732 0 0 1 14 5.286a2.962 2.962 0 0 0-2.002-.786V.75a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0-.75.75V4.5c-1.654 0-3 1.346-3 3V21c0 1.654 1.346 3 3 3h18c1.654 0 3-1.346 3-3V.75a.75.75 0 0 0-.75-.75zm-12 6h.75c.453 0 .842.217 1.116.536a7.63 7.63 0 0 1-1.233 1.156 2.975 2.975 0 0 0-1.147 2.844l1.89 11.964H8.247v-21h2.25v3.75c0 .414.336.75.75.75zm-9.75 15V7.5c0-.827.673-1.5 1.5-1.5h.75a.75.75 0 0 0 .75-.75V1.5h2.25v21h-3.75c-.827 0-1.5-.673-1.5-1.5zm21 0c0 .827-.673 1.5-1.5 1.5h-6.856l-1.926-12.199a1.475 1.475 0 0 1 .562-1.406A9.282 9.282 0 0 0 16.53 1.5h5.967V21z"></path></svg>Survêtements</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=costume"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M22.493 4.418a.748.748 0 0 0-.36-.56l-3.746-2.25c-.012-.007-.025-.007-.037-.013-.018-.01-.033-.024-.052-.033L14.868.086a.744.744 0 0 0-.295-.06L14.57.024H9.425c-.1 0-.2.019-.297.061L5.704 1.563c-.019.008-.033.022-.05.031-.013.007-.027.007-.039.014l-3.75 2.25a.75.75 0 0 0-.36.56l-1.5 13.5a.75.75 0 0 0 .594.817l3.498.723-.343 3.716a.752.752 0 0 0 .747.82h7.458c.013 0 .025.007.039.007.014 0 .025-.007.039-.008H19.5a.75.75 0 0 0 .747-.82l-.346-3.715 3.495-.723a.75.75 0 0 0 .593-.817l-1.497-13.5zm-7.352-2.581 2.098.903c-.176 3.824-2.367 7.427-4 9.608l1.902-10.511zm-1.468-.312-1.675 9.261-1.675-9.261h3.35zm-4.818.312 1.9 10.509c-1.63-2.181-3.817-5.784-3.993-9.606l2.093-.903zM6.063 14.089l-.83-3.75a.751.751 0 0 0-1.464.324l.804 3.636-.338 3.656-2.663-.55L2.956 4.952l2.362-1.417c.59 5.76 4.923 10.689 5.933 11.767l-.003 7.19H5.323l.755-8.173a.767.767 0 0 0-.015-.231zm13.7 3.867-.341-3.657.811-3.634a.75.75 0 0 0-1.464-.328l-.837 3.75a.773.773 0 0 0-.015.233l.76 8.173h-5.929l.003-7.196c1.021-1.091 5.342-6.011 5.933-11.761l2.36 1.417 1.38 12.452-2.662.55z"></path></svg>Costumes</a></li>
+                            <li><div class="separator">Bas</div></li>
+                            <li><a class="dropdown-item" href="shop.html?q=short"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.2 9.6 21 .6c-.1-.4-.4-.6-.8-.6H3.7c-.3 0-.6.2-.7.6l-2.2 9v.1L0 23.2c0 .5.3.8.8.8H10c.4 0 .7-.2.7-.6l1.3-6.2 1.3 6.2c.1.3.4.6.7.6h9.2c.4 0 .7-.4.7-.8l-.7-13.6zm-2.3-3C18.6 6 16.8 4 16.5 1.5h3.1l1.3 5.1zM4.3 1.5h3.1c-.3 2.4-2 4.4-4.4 5.1l1.3-5.1zm10.3 21-1.9-9.1c-.1-.3-.3-.5-.6-.6-.4-.1-.8.2-.9.6l-1.9 9.1H1.6l.7-12.6.4-1.7C3.9 7.9 8.5 6.6 9 1.5h6c.4 5.1 5 6.4 6.3 6.7l.4 1.6.7 12.7h-7.8z"></path><path d="M12 3c-.4 0-.7.3-.7.7 0 .4.3.7.7.7s.7-.3.7-.7c.1-.4-.3-.7-.7-.7z"></path></svg>Shorts/Bermudas</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=pantalon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M19.5.746a.75.75 0 0 0-.75-.725H5.25a.75.75 0 0 0-.75.725l-.672 20.17-.002.105c0 1.654 1.346 3 3 3h1.001a2.986 2.986 0 0 0 2.964-2.532L12 13.83l1.209 7.66a2.987 2.987 0 0 0 2.964 2.53h1.1a3.004 3.004 0 0 0 2.9-3.1L19.5.747zm-2.326 21.775h-1.001a1.492 1.492 0 0 1-1.482-1.266l-1.95-12.351a.75.75 0 0 0-1.482 0l-1.95 12.35a1.493 1.493 0 0 1-1.482 1.266h-1c-.828 0-1.5-.672-1.5-1.548L5.976 1.52h4.916L9.804 4.243a.75.75 0 1 0 1.392.556L12 2.79l.804 2.01a.75.75 0 1 0 1.392-.557L13.108 1.52h4.916l.649 19.45c.027.827-.622 1.521-1.5 1.55z"></path></svg>Pantalon</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=jean"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><circle cx="12" cy="3" r=".8"></circle><path d="M20.28 6.716a.773.773 0 0 0-.023-.157l-.362-1.37a.737.737 0 0 0-.068-.257L18.673.56A.75.75 0 0 0 17.947 0H6.032a.75.75 0 0 0-.725.559l-1.585 6a.726.726 0 0 0-.024.158l-.73 16.5a.75.75 0 0 0 .75.783h6.004a.75.75 0 0 0 .735-.6l1.565-7.626 1.527 7.623a.75.75 0 0 0 .735.603h5.997a.751.751 0 0 0 .75-.784l-.75-16.5zm-2.16-2.373A3.75 3.75 0 0 1 15.484 1.5h1.885l.751 2.843zM6.61 1.5h1.975A3.752 3.752 0 0 1 5.85 4.374L6.61 1.5zm8.288 21-2.13-10.647a.75.75 0 0 0-.734-.603h-.002a.75.75 0 0 0-.735.6L9.11 22.5H4.502l.69-15.636.24-.91A5.226 5.226 0 0 0 10.086 1.5h3.9a5.227 5.227 0 0 0 4.558 4.446l.243.918.71 15.636h-4.598z"></path></svg>Jeans</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=maillot-de-bain"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M22.512 7.87V4.123a.752.752 0 0 0-.754-.75H2.178a.752.752 0 0 0-.754.75l.007 3.6-1.406 10.5a.75.75 0 0 0 .567.829l9.038 2.2c.394.098.8-.139.906-.533l1.256-4.646h.451L13.5 20.72a.754.754 0 0 0 .906.533l9.037-2.2a.75.75 0 0 0 .567-.836L22.512 7.87zM2.93 7.823v-2.95h1.506v3.194l-1.49 10.014-1.34-.326L2.93 7.823zm11.833 11.798-1.214-4.493a.754.754 0 0 0-.728-.555h-1.606a.754.754 0 0 0-.728.555l-1.214 4.493-4.857-1.182L5.935 8.233a.837.837 0 0 0 .008-.11v-3.25h4.496l-1.526 1.52a.748.748 0 0 0 .533 1.28.751.751 0 0 0 .532-.219l1.676-1.67 1.677 1.67a.751.751 0 0 0 1.065 0 .748.748 0 0 0 0-1.06l-1.527-1.52h5.224v3.25c0 .036.003.072.008.11l1.517 10.205-4.855 1.182zm6.326-1.54-1.49-10.014V4.873h1.406v3.05c0 .037.003.072.008.108l1.408 9.726-1.332.324z"></path></svg>Mailots de bains</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Chaussures -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Chaussures</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shop.html?q=sneaker"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.223 6.955a.75.75 0 0 0-1.3-.318c-1.22 1.424-2.437 2.136-3.698 2.069-1.952-.081-3.36-1.999-3.372-2.017a.751.751 0 0 0-.928-.244L2.748 11.666a4.073 4.073 0 0 0-2.755 3.673l.003.018c0 .006-.004.012-.004.018v3c0 .414.336.75.75.75h22.5a.75.75 0 0 0 .75-.75v-3.002a30.698 30.698 0 0 0-.77-8.418zm-9.188 1.094c.673.742 2.145 2.068 4.115 2.155 1.349.066 2.653-.461 3.895-1.553.362 1.969.509 3.97.462 5.974h-4.954L11.95 9.022l2.085-.973zm-1.732 6.576L8.37 10.693l2.186-1.02a.744.744 0 0 0 .155.232l4.72 4.72h-3.13zm-8.993-1.57 3.624-1.692c.011.013.016.03.028.042l3.22 3.22H1.655c.269-.714.852-1.29 1.655-1.57zm19.182 4.57h-21v-1.5h21v1.5z"></path></svg>Sneakers</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=sandale"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.2 13.9h-8.1l7.6-2.3c.3-.1.5-.4.5-.7v-3c0-.2-.1-.5-.3-.6-.2-.1-.4-.2-.7-.1L13 10.1l-.7-2.7c-.1-.4-.5-.6-.9-.5l-3 .8c-.5 0-.7.4-.6.8l1.6 5.4H8.1L6.7 8.5c-.1-.4-.5-.6-.9-.5l-3 .8c-.4 0-.6.4-.5.8l1.2 4.3H.8c-.4 0-.7.3-.7.8v.8c0 1.7 1.3 3 3 3h20.2c.4 0 .7-.3.7-.8v-3c0-.4-.3-.8-.8-.8zM21.8 9v1.4l-8.1 2.4-.3-1.3L21.8 9zM9.5 8.8l1.5-.3.7 2.7.7 2.7h-1.5L9.5 8.8zM3.9 10l1.5-.4 1.1 4.3H5.1L3.9 10zm18.6 6.9H3c-.8 0-1.5-.7-1.5-1.5h21v1.5z"></path></svg>Sandales</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=botte"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.25 16.875V2.625a.75.75 0 0 0-1.5 0v1.5H13.5a.75.75 0 0 0-.75.75v2.01l-3.443 4.82-5.31 1.18A2.997 2.997 0 0 0 1.862 14.7l-.87 2.175H.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75h13.5a.75.75 0 0 0 .416-.126l1.084-.723v.099c0 .414.336.75.75.75h6.75a.75.75 0 0 0 .75-.75v-3.75a.75.75 0 0 0-.75-.75zm-5.176 0a5.3 5.3 0 0 1 3.676-4.307v4.307h-3.676zM14.11 7.561c.091-.127.14-.28.14-.436v-1.5h7.5v5.38a6.807 6.807 0 0 0-5.2 5.87h-2.664l-3.214-4.5 3.438-4.814zM3.255 15.257c.184-.461.583-.8 1.067-.907l5.106-1.135 2.615 3.66H2.608l.647-1.618zM22.5 20.625h-5.25v-.75a.75.75 0 0 0-1.166-.624l-2.062 1.374H1.5v-2.25h21v2.25z"></path></svg>Bottes</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=chausson"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.2 14.8h-8.6l-3.5-5.6c-.2-.3-.5-.4-.9-.3L2 11.4c-1.1.3-2 1.5-2 2.8v1.3c0 .4.3.7.8.7h22.5c.4 0 .8-.3.8-.8-.1-.3-.4-.6-.9-.6zm-21.7 0v-.6c0-.7.4-1.2 1.1-1.4l7.6-2.3 2.7 4.4H1.5z"></path></svg>Chaussons</a></li>
+                            <li><div class="separator">Autres</div></li>
+                            <li><a class="dropdown-item" href="shop.html?q=entretient"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M12.1 0H4.6c-.4 0-.7.4-.7.8l.8 18.8c0 .4.3.7.7.7h.8v3c0 .4.3.7.8.7h3c.4 0 .7-.3.7-.8v-3h.8c.4 0 .7-.3.7-.7L13 .7c-.1-.3-.5-.7-.9-.7zm-3 22.5H7.6v-2.2h1.5v2.2zm1.6-3.7H6.1L5.4 1.5h5.9l-.6 17.3zM18.9 3.8c.4 0 .8-.3.8-.8 0-.4-.3-.8-.8-.8h-1.5v-.7h1.5c.4 0 .8-.3.8-.8 0-.4-.3-.8-.8-.8h-2.2c-.4 0-.7.3-.7.8v22.5c0 .4.3.7.8.7.4 0 .7-.3.7-.8v-15H19c.4 0 .8-.3.8-.8 0-.4-.3-.8-.8-.8h-1.5V6H19c.4 0 .8-.3.8-.8 0-.4-.3-.8-.8-.8h-1.5v-.6h1.4z"></path></svg>Entretient</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Accessoires -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Accessoires</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shop.html?q=sac"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M21.4 10.5c.1-.3.1-.6.1-1l-.3-3.8C21 4.2 19.7 3 18.2 3h-2.5c-.3-1.7-1.9-3-3.7-3S8.7 1.3 8.3 3H5.8c-1.6 0-2.9 1.2-3 2.7l-.3 3.8v.3c0 .3 0 .5.1.7l-.9 10.2v.3c0 1.7 1.3 3 3 3h14.9c1.6-.1 2.9-1.6 2.7-3.2l-.9-10.3zm-9.4-9c1 0 1.8.6 2.1 1.5H9.9c.3-.9 1.1-1.5 2.1-1.5zM4.3 5.9c.1-.8.7-1.4 1.5-1.4H18.2c.8 0 1.4.6 1.5 1.4l.3 3.7v.1c0 .8-.7 1.5-1.5 1.5H5.4c-.9 0-1.5-.8-1.4-1.6l.3-3.7zm15 16.6H4.6c-.8-.1-1.4-.8-1.4-1.6l.7-8.6c.5.3 1 .4 1.6.4h2v3.8c0 .4.3.7.8.7.4 0 .7-.3.7-.8v-3.8h6v3.8c0 .4.3.7.8.7.4 0 .7-.3.7-.8v-3.8h2.3c.5 0 .9-.2 1.3-.4l.7 8.6v.1c0 1-.7 1.7-1.5 1.7z"></path></svg>Sacs</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=lunette"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.25 9.208h-.857a2.996 2.996 0 0 0-2.893-2.25h-15a2.996 2.996 0 0 0-2.893 2.25H.75a.75.75 0 0 0 0 1.5h.75v.517a4.998 4.998 0 0 0 4.614 5.101 4.87 4.87 0 0 0 5.048-3.995c.001-.008.006-.014.007-.022v-.048l.002-.023a.847.847 0 0 1 1.634-.268c.293 2.317 2.163 4.172 4.559 4.356a4.876 4.876 0 0 0 5.136-4.868v-.75h.75a.75.75 0 1 0 0-1.5zm-17.057 5.62A3.544 3.544 0 0 1 3 11.226V9.958c0-.828.672-1.499 1.5-1.5h3.75c.828.001 1.5.672 1.5 1.5v1.5a3.377 3.377 0 0 1-3.557 3.37zm5.944-4.892a2.332 2.332 0 0 0-.887.129v-.107c0-.549-.16-1.057-.417-1.5h2.334c-.258.443-.416.951-.417 1.5v.103a2.322 2.322 0 0 0-.613-.125zM21 11.458a3.377 3.377 0 0 1-3.557 3.37 3.536 3.536 0 0 1-3.097-2.754c-.011-.131-.03-.26-.062-.384-.017-.153-.037-.306-.034-.465V9.958c0-.828.672-1.499 1.5-1.5h3.75c.828.001 1.5.672 1.5 1.5v1.5z"></path></svg>Lunettes de soleil</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=casquette"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="m23.823 17.099-3.575-4.29V7.714a3.367 3.367 0 0 0-3.363-3.363H7.11a3.367 3.367 0 0 0-3.363 3.363v5.093L.173 17.1a.75.75 0 0 0 .575 1.23h22.5a.75.75 0 0 0 .575-1.23zM7.111 5.852h9.774a1.866 1.866 0 0 1 1.863 1.863v4.615h-13.5V7.715a1.866 1.866 0 0 1 1.863-1.863zM2.35 16.83l2.5-3h14.297l2.5 3H2.35z"></path></svg>Casquettes, bonnets, chapeaux</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=montre"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M21 12c0-2.7-1.2-5.1-3-6.7V.8c0-.4-.3-.8-.8-.8H6.8c-.5 0-.8.4-.8.8v4.5c-1.8 1.6-3 4-3 6.7s1.2 5.1 3 6.7v4.6c0 .4.3.7.8.7h10.5c.4 0 .7-.3.7-.8v-4.6c1.8-1.6 3-3.9 3-6.6zM7.5 1.5h9v2.7C15.2 3.4 13.6 3 12 3s-3.2.4-4.5 1.2V1.5zM4.5 12c0-4.1 3.4-7.5 7.5-7.5s7.5 3.4 7.5 7.5-3.4 7.5-7.5 7.5-7.5-3.4-7.5-7.5zm12 10.5h-9v-2.7c1.3.7 2.9 1.2 4.5 1.2s3.2-.4 4.5-1.2v2.7z"></path><path d="M11.7 13.5c.1 0 .2.1.3.1.2 0 .4-.1.5-.2l3-3c.3-.3.3-.8 0-1-.3-.3-.8-.3-1.1 0L12.8 11V6.8c0-.4-.4-.8-.8-.8s-.8.3-.8.8v6c0 .3.2.5.5.7z"></path></svg>Montres</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=ceinture"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.2 7.5H19c-.4-.9-1.4-1.5-2.5-1.5h-9c-1.1 0-2.1.6-2.6 1.5H.8c-.5 0-.8.3-.8.8v7.5c0 .4.3.7.8.7H5c.4.9 1.4 1.5 2.5 1.5h9c1.1 0 2.1-.6 2.6-1.5h4.2c.4 0 .7-.3.7-.8V8.3c0-.5-.3-.8-.8-.8zM1.5 15V9h3v6h-3zm15 1.5h-9c-.8 0-1.5-.7-1.5-1.5v-2.2h5c.4 0 .8-.3.8-.8 0-.4-.3-.8-.8-.8H6V9c0-.8.7-1.5 1.5-1.5h9c.8 0 1.5.7 1.5 1.5v6c0 .8-.7 1.5-1.5 1.5zm6-1.5h-3V9h3v6z"></path></svg>Ceintures</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=portefeuille"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M21 6v-.2l-1-3.3C19.5.9 17.8 0 16.2.5L.5 6H.4c-.1 0-.1.1-.1.1l-.1.1-.1.1v.1c-.1.1-.1.2-.1.3v16.5c0 .4.3.8.8.8H21c1.7 0 3-1.3 3-3V9c0-1.7-1.3-3-3-3zm-4.3-4.1c.8-.2 1.6.2 1.9 1l.9 3H5.2l11.5-4zM22.5 21c0 .8-.7 1.5-1.5 1.5H1.5v-15H21c.8 0 1.5.7 1.5 1.5v12z"></path><path d="M20.2 19.5h-3c-.4 0-.8.3-.8.7 0 .4.3.8.8.8h3c.4 0 .8-.3.8-.8 0-.4-.3-.7-.8-.7z"></path></svg>Portefeuilles</a></li>
+
+                            <!-- Bijoux dropdown -->
+                            <li class="nav-item dropend">
+                                <a class="nav-link dropdown-toggle dropdown-item" style="padding: 0.25rem 1rem;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.5 3c0-1.7-1.3-3-3-3h-17c-.6 0-1.2.2-1.7.5C.4 1.5.1 3.3 1 4.7l9.6 14.1h-.1c-.4 0-.7.3-.7.8v3.8c0 .4.3.7.8.7h3c.4 0 .7-.3.7-.8v-3.8c0-.4-.3-.7-.8-.7h-.1L23 4.7c.3-.5.5-1.1.5-1.7zM12.7 22.5h-1.5v-2.2h1.5v2.2zm9-18.7L12 18.2 2.3 3.8C2.1 3.6 2 3.3 2 3c0-.8.7-1.5 1.5-1.5h17c.3 0 .6.1.8.3.7.4.9 1.4.4 2z"></path></svg>Bijoux</a>
+                                <ul class="dropdown-menu">
+
+                                    <!-- Coliers -->
+                                    <li><a class="dropdown-item" href="shop.html?q=colier"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M23.5 3c0-1.7-1.3-3-3-3h-17c-.6 0-1.2.2-1.7.5C.4 1.5.1 3.3 1 4.7l9.6 14.1h-.1c-.4 0-.7.3-.7.8v3.8c0 .4.3.7.8.7h3c.4 0 .7-.3.7-.8v-3.8c0-.4-.3-.7-.8-.7h-.1L23 4.7c.3-.5.5-1.1.5-1.7zM12.7 22.5h-1.5v-2.2h1.5v2.2zm9-18.7L12 18.2 2.3 3.8C2.1 3.6 2 3.3 2 3c0-.8.7-1.5 1.5-1.5h17c.3 0 .6.1.8.3.7.4.9 1.4.4 2z"></path></svg>Coliers</a></li>
+
+                                    <!-- Bagues -->
+                                    <li><a class="dropdown-item" href="shop.html?q=bague"><svg xmlns="http://www.w3.org/2000/svg" fill="#727cf5" width="16" height="16" viewBox="0 0 172 172" class="me-2"><path d="M86,43c-19.94629,0 -38.08692,3.65332 -51.65039,9.91016c-6.80274,3.14942 -12.51368,6.92871 -16.7129,11.50586c-4.15723,4.61914 -6.88672,10.1621 -6.88672,16.20898c0,9.23828 6.13086,17.04883 14.86524,22.84375c7.4746,4.95508 17.21679,8.73438 28.38672,11.25391l14.06737,25.02734h35.86133l14.10938,-25.02734c11.12793,-2.51953 20.87011,-6.29882 28.38672,-11.25391c8.69239,-5.79492 14.82324,-13.60547 14.82324,-22.84375c0,-6.04687 -2.72949,-11.58984 -6.88672,-16.20898c-4.19922,-4.57716 -9.91016,-8.35645 -16.6709,-11.50586c-13.60547,-6.25683 -31.74609,-9.91016 -51.69239,-9.91016zM86,53.75c18.64453,0 35.44141,3.52734 47.15723,8.94433c5.83692,2.6875 10.37207,5.87891 13.26953,9.02832c2.89746,3.10743 4.07324,6.00489 4.07324,8.90234c0,4.40918 -3.06543,9.28027 -10.03614,13.89942c-6.25683,4.15723 -15.36914,7.68457 -26.11914,9.99414l-10.41406,-18.51855h-35.86133l-10.41406,18.51855c-10.75,-2.30956 -19.8623,-5.83691 -26.11914,-9.99414c-6.97071,-4.61915 -10.03614,-9.49024 -10.03614,-13.89942c0,-2.89746 1.17578,-5.79492 4.07324,-8.90234c2.89747,-3.14942 7.43263,-6.34082 13.26953,-9.02832c11.71582,-5.41699 28.5127,-8.94433 47.15723,-8.94433zM74.36817,96.75h23.26367l9.07031,16.125l-9.07031,16.125h-23.26367l-9.07031,-16.125z"></path></svg>Bagues</a></li>
+
+                                    <!-- Bracelets -->
+                                    <li><a class="dropdown-item" href="shop.html?q=bracelet"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 160 160" class="me-2"><path d="M80.625,10.75c-7.76855,0 -14.27734,5.58496 -15.78906,12.93359c-4.74511,1.30176 -9.1123,3.35938 -13.26953,5.71094c-2.51953,-1.55371 -5.41699,-2.51953 -8.56641,-2.51953c-8.86035,0 -16.125,7.26465 -16.125,16.125c0,3.14942 0.96582,6.04688 2.51953,8.56641c-2.35156,4.15723 -4.40918,8.52442 -5.71094,13.26953c-7.34864,1.51172 -12.93359,8.02051 -12.93359,15.78906c0,7.76855 5.62696,14.27734 12.93359,15.78906c1.34375,4.74511 3.35938,9.1123 5.71094,13.26953c-1.55371,2.51953 -2.51953,5.41699 -2.51953,8.56641c0,8.86035 7.26465,16.125 16.125,16.125c3.06543,0 5.9209,-0.92382 8.35645,-2.43554c4.19922,2.39355 8.69239,4.32519 13.47949,5.62695v0.04199c1.51172,7.30665 8.0625,12.8916 15.78906,12.8916c7.76855,0 14.27734,-5.62695 15.78906,-12.93359c4.74511,-1.34375 9.28027,-3.19141 13.47949,-5.58496c2.47754,1.46973 5.29102,2.39355 8.35645,2.39355c8.86035,0 16.125,-7.26465 16.125,-16.125c0,-3.14942 -0.96582,-6.04687 -2.51953,-8.56641c2.35156,-4.15723 4.40918,-8.52442 5.71094,-13.26953c7.34864,-1.51172 12.93359,-8.02051 12.93359,-15.78906c0,-7.81054 -5.71094,-14.40332 -13.10156,-15.78906c-1.34375,-4.74511 -3.14942,-9.23828 -5.50098,-13.35351c1.55372,-2.47754 2.47754,-5.375 2.47754,-8.48243c0,-8.86035 -7.26465,-16.125 -16.125,-16.125c-3.14942,0 -6.04687,0.96582 -8.56641,2.51953c-4.15723,-2.35156 -8.52442,-4.40918 -13.26953,-5.71094c-1.51172,-7.34864 -8.02051,-12.93359 -15.78906,-12.93359zM80.625,21.5c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM66.55761,34.55957c2.77149,4.99707 8.02051,8.44043 14.06739,8.44043c6.04688,0 11.2959,-3.44335 14.06739,-8.44043c2.89746,0.88183 5.66895,2.01563 8.35645,3.40136c-0.54591,1.59571 -0.92383,3.2754 -0.92383,5.03906c0,8.86035 7.26465,16.125 16.125,16.125c1.76368,0 3.48535,-0.37793 5.08105,-0.92382c1.38575,2.6455 2.51953,5.41699 3.40138,8.31445c-4.99707,2.77149 -8.48243,8.02051 -8.48243,14.10938c0,6.04688 3.44336,11.2959 8.44043,14.06739c-0.88183,2.89746 -2.01562,5.66895 -3.40136,8.35645c-1.5957,-0.54591 -3.27539,-0.92383 -5.03906,-0.92383c-8.86035,0 -16.125,7.26465 -16.125,16.125c0,1.76368 0.33594,3.40136 0.88183,4.99707c-2.6455,1.38574 -5.41699,2.51953 -8.35644,3.40136c-2.7295,-4.95507 -7.97852,-8.39844 -14.0254,-8.39844c-6.04687,0 -11.2959,3.44336 -14.02539,8.39844c-2.93946,-0.88183 -5.71094,-2.01562 -8.35645,-3.40136c0.5459,-1.59571 0.88183,-3.2334 0.88183,-4.99707c0,-8.86035 -7.26465,-16.125 -16.125,-16.125c-1.76367,0 -3.44335,0.37793 -5.03906,0.92383c-1.38574,-2.64551 -2.51953,-5.417 -3.44335,-8.31446c5.03906,-2.77148 8.48242,-8.0625 8.48242,-14.10937c0,-6.04687 -3.44335,-11.2959 -8.44043,-14.06739c0.88183,-2.89746 2.01563,-5.66894 3.40136,-8.31445c1.59571,0.5459 3.2754,0.88183 5.03906,0.88183c8.86035,0 16.125,-7.26465 16.125,-16.125c0,-1.76367 -0.33594,-3.44335 -0.88183,-5.03906c2.64551,-1.38574 5.41699,-2.51953 8.31445,-3.40136zM43,37.625c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM118.25,37.625c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM26.875,75.25c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM134.375,75.25c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM43,112.875c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM118.25,112.875c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375zM80.625,129c3.02344,0 5.375,2.35156 5.375,5.375c0,3.02344 -2.35156,5.375 -5.375,5.375c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375z"></path></svg>Bracelets</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropdown-item" href="shop.html?q=cravate"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="M16.5 1V.8c0-.4-.3-.7-.7-.7H8.3C8.2 0 8.1 0 8 0c-.4.1-.6.6-.5 1L9 6.1 7.5 19.4c0 .2.1.5.2.6l3.8 3.8c.1.1.3.2.5.2s.4-.1.5-.2l3.7-3.8c.2-.2.2-.4.2-.6L15 6.1 16.5 1zm-1.7.5-1.1 3.8h-3.4L9.2 1.5h5.6zM12 22.2l-3-3 1.4-12.5h3.2L15 19.2l-3 3z"></path></svg>Cravates et accessoires</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=gant"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="m22.9 6.7.1-.1c1-.7 1.3-2.1.6-3.2-.6-.9-1.7-1.2-2.6-.8-.1-.3-.2-.5-.3-.8-.7-1-2.1-1.3-3.2-.6L10 6.4l-1.3.9.4-2.5c.2-1.4-.8-2.8-2.2-3-1.4-.2-2.8.8-3 2.2l-1.3 8.6c-.1.3-.1.6 0 .8L.4 14.9c-.3.2-.4.7-.2 1.1l5.2 7.4c.1.2.3.3.5.3H6c.2 0 .3 0 .4-.1l2.2-1.5c.4.2.8.3 1.3.3.6 0 1.2-.2 1.7-.5l6.2-4.3 3.7-2.6c1-.7 1.3-2.1.6-3.2-.2-.2-.3-.4-.5-.5l1.4-.9c1-.7 1.3-2.1.6-3.2-.3-.2-.5-.4-.7-.5zM6.1 22.1l-4.3-6.2 1.3-.9 1.4 2 3 4.2-1.4.9zM22 9.1l-3.1 2.2-3.7 2.6c-.1.1-.2.1-.2.2v.1c0 .1-.1.2-.1.2V14.7s0 .1.1.1v.1l.1.1.1.1.1.1h.6c.1 0 .2-.1.2-.1l3.7-2.6c.3-.2.8-.2 1.1.2.2.3.2.8-.2 1.1L17 16.4l-6.2 4.3c-.7.5-1.6.3-2.1-.4L5 15l-.7-.9c-.2-.3-.3-.8-.2-1.2l1.3-8.6c.1-.6.7-1 1.3-.9.6.1 1 .7.9 1.3L7 8.8c0 .2 0 .4.1.5.2.3.7.4 1.1.2l2.7-1.9 7.4-5.2c.3-.2.8-.2 1.1.2.2.3.2.8-.2 1.1l-7.4 5.2c-.1.1-.2.2-.2.3v.1c0 .1 0 .1-.1.2V9.8c0 .1 0 .1.1.1v.1l.1.1.1.1s.1 0 .1.1h.5c.1 0 .2-.1.2-.1l8.7-6.1c.3-.2.8-.2 1.1.2.2.3.2.8-.2 1.1l-1.9 1.3-6.8 4.8c-.1.1-.2.2-.2.3v.1c0 .1 0 .1-.1.2V12.4c0 .1 0 .1.1.1v.1l.1.1.1.1s.1 0 .1.1h.5c.1 0 .2-.1.2-.1L21.1 8c.3-.2.8-.2 1.1.2.3.2.2.7-.2.9z"></path></svg>Gants</a></li>
+                            <li><a class="dropdown-item" href="shop.html?q=parapluie"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" viewBox="0 0 24 24" class="me-2"><path d="m20.436 4.276 1.712-1.713.011-.01a.75.75 0 1 0-1.071-1.05l-1.713 1.713C14.462-1.146 6.947-.987 2.241 3.719a.75.75 0 0 0 0 1.06l4.562 4.562.003.005 3.22 3.22-6.12 6.118a3.108 3.108 0 0 0 0 4.391l.553.553a.748.748 0 0 0 1.06 0 .75.75 0 0 0 0-1.06l-.552-.553a1.608 1.608 0 0 1 0-2.27l6.119-6.12 3.22 3.22c0 .002.003.002.004.004l4.562 4.561a.748.748 0 0 0 1.06 0c4.706-4.706 4.865-12.221.504-17.134zM8.405 8.822c4.343-4.097 8.827-5.449 10.375-4.113.048.046.098.092.145.14 1.367 1.526.024 6.032-4.096 10.398L8.405 8.822zm7.731-6.03c-2.571.38-5.794 2.142-8.787 4.975l-3.5-3.5c3.468-3.024 8.354-3.51 12.287-1.476zm3.248 17.01-3.5-3.5c2.834-2.993 4.598-6.216 4.978-8.789 2.01 3.896 1.579 8.784-1.478 12.289z"></path></svg>Parapluies</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Search -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rechercher</a>
+                        <div class="dropdown-menu p-2" style="min-width: 400px;">
+                            <form class="d-flex" role="search" id="searchForm">
+                                <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher" id="searchInput">
+                                <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                            </form>
+                            <script>
+                                $("#searchForm").submit(function(event) {
+                                    event.preventDefault();
+                                    location = `shop.html?q=${$("#searchInput").val()}`;
+                                });
+                            </script>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#727cf5" class="bi bi-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg></a>
+                        <ul class="dropdown-menu dropdown-menu-end" id="accountDropdown">
+                            <script>if(aaa("user") != null){$(`<li><a class="dropdown-item" href="../user/dashboard.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" class="bi bi-person me-2" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>Mon compte</a></li><li><a class="dropdown-item" href="../user/orders.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" class="bi bi-box me-2" viewBox="0 0 16 16"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/></svg>Mes commandes</a></li><li><a class="dropdown-item" href="../user/setings.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" class="bi bi-gear me-2" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/><path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/></svg>Paramètres</a></li>`).appendTo("#accountDropdown")}else{$(`<li><a class="dropdown-item" href="compte/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#727cf5" class="bi bi-person me-2" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>Se connecter</a></li>`).appendTo("#accountDropdown");};function aaa(name) {function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));return match ? match[1] : null;}</script>
+                        </ul>
+                    </li>
+                    <!-- Panier -->
+                    <li class="nav-item">
+                        <a href="../user/cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#727cf5" class="bi bi-cart" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span class="badge rounded-pill bg-danger" id="cartCount"></span><script>var query = `SELECT cart FROM users WHERE id = '${aaa("user")}' OR google_id = '${aaa("user")}'`;$.get(`http://localhost:8080/product-infos/${query}`, function (cart, status) {cart = JSON.parse(cart[0].cart);$("#cartCount").text(cart.length);});</script>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progressbar script -->
+    <script>function updateProgress(num1, num2){var percent = Math.ceil( num1 / num2 * 100 ) + '%';$("#scrollProgressBar").width(percent);}window.addEventListener('scroll', function(){var top = window.scrollY;var height = document.body.getBoundingClientRect().height - window.innerHeight;updateProgress(top, height);});</script>
+    <!-- Progressbar -->
+    <div class="w-100 p-1 position-fixed bg-grey shadow" style="bottom: 0; z-index: 1000;">
+        <div class="progress">
+            <div class="progress-bar" style="width:0%" id="scrollProgressBar"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-2" style="margin-top: calc(56px + 0.5rem);">
+        <div id="filters" class="bg-white p-2 rounded">
+            <h4>Filtres :</h4>
+            <div class="row">
+                <!-- Color -->
+                <div class="col-4">
+                    <select class="form-select parameter selectpicker" id="colorFilter" aria-label="Couleur" onchange="main()">
+                        <option selected>Couleur</option>
+                    </select>
+                </div>
+                <!-- Order -->
+                <div class="col-4">
+                    <select class="form-select parameter" aria-label="Trier" onchange="main()">
+                        <option selected>Trier</option>
+                        <option value="price ASC">Prix croissant</option>
+                        <option value="price DESC">Prix décroissant</option>
+                        <option value="date DESC">Nouveautés</option>
+                    </select>
+                </div>
+                <!-- Price range -->
+                <div class="col-4">
+                    <div class="dropdown">
+                        <button type="button" class="btn w-100 border dropdown-toggle priceDropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside">Prix</button>
+                        <ul class="dropdown-menu parameter w-100">
+                            <li><div class="dropdown-item"><label for="minPrice" class="form-label">Minimum</label><div class="input-group"><input type="number" class="form-control" id="minPrice" placeholder="Prix minimum" name="minPrice"><span class="input-group-text">€</span></div></div></li>
+                            <li><hr class="dropdown-divider"></hr></li>
+                            <li><div class="dropdown-item"><label for="maxPrice" class="form-label">Minimum</label><div class="input-group"><input type="number" class="form-control" id="maxPrice" placeholder="Prix minimum" name="maxPrice"><span class="input-group-text">€</span></div></div></li>
+                            <li><hr class="dropdown-divider"></hr></li>
+                            <li><div class="dropdown-item"><button class="btn btn-primary w-100" onclick="main()">Appliquer</button></div></li>
+                        </ul>
+                        <style>.priceDropdown {text-align: left !important; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");background-repeat: no-repeat;background-position: right 0.75rem center;background-size: 16px 12px;}.priceDropdown::after {display: none;}.parameter > li > div:hover{background-color: transparent;color: #212529;}</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shop" class="p-2"></div>
+
+    <div id="pagination" class="d-flex flex-row justify-content-center w-100 shadow p-3 mb-3"></div>
+
+    <div id="err" class="position-absolute top-50 d-flex flex-row justify-content-center w-100"></div>
+
+    <script>
+        main(false);
+        function main(status) {
+            $("#pagination").empty();
+            $("#shop").empty();
+            $("#err").empty();
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const q = urlParams.get('q');
+            const rowOfProducts = 20;
+            const productsPerPage = Math.round($("#shop").innerWidth()/390) * rowOfProducts;
+            if(q == null){
+                var color = '';
+                var colorArray = [];
+                var tri = 'ORDER BY id ASC';
+                var priceLimit = '';
+                $(".parameter").each(function(index){
+                    if(index == 0){
+                        if($(".parameter")[index].selectedIndex != 0){
+                            color = `AND ColorDenomination = '${$(".parameter")[index].value}'`;
+                        }
+                    }else if(index == 1){
+                        if($(".parameter")[index].selectedIndex != 0){
+                            tri = `ORDER BY ${$(".parameter")[index].value}`;
+                        }
+                    }else if(index == 2){
+                        if($("#minPrice").val() != ""){
+                            priceLimit = `AND price >= ${$("#minPrice").val()}`;
+                        }
+                        if($("#maxPrice").val() != ""){
+                            priceLimit += ` AND price <= ${$("#maxPrice").val()}`
+                        }
+                    }
+                })
+                if(urlParams.get('p') == null){var p = 0;}else{var p = parseInt(urlParams.get('p'));}
+                var offset = productsPerPage*p;
+                var query = `SELECT COUNT(*) FROM products WHERE 1 ${color} ${priceLimit}`;
+                $.get(`http://localhost:8080/product-infos/${query}`, function(data){
+                    if(data[0]['COUNT(*)'] != 0){
+                        var pagination = `<ul class="pagination m-0">`;
+                        if(p > 0){
+                            pagination += `<li class="page-item"><a class="page-link" href="shop.html?p=${parseInt(p)-1}">Précédent</a></li>`;
+                        }else{
+                            pagination += `<li class="page-item disabled"><a class="page-link ">Précédent</a></li>`;
+                        }
+                        if(Math.round(data[0]['COUNT(*)']/productsPerPage) == 0){
+                            pagination += `<li class="page-item active disabled"><a class="page-link">1</a></li>`;
+                        }
+                        for(let i = 0;i <= Math.round(data[0]['COUNT(*)']/productsPerPage)-1;i++){
+                            if(i == p){
+                                pagination += `<li class="page-item active"><a class="page-link" href="shop.html?p=${i}">${i+1}</a></li>`;
+                            }else{
+                                pagination += `<li class="page-item"><a class="page-link" href="shop.html?p=${i}">${i+1}</a></li>`;
+                            }
+                        }
+                        if(p < Math.round(data[0]['COUNT(*)']/productsPerPage)-1){
+                            pagination += `<li class="page-item"><a class="page-link" href="shop.html?p=${(parseInt(p)+1)}">Suivant</a></li></ul>`;
+                        }else{
+                            pagination += `<li class="page-item disabled"><a class="page-link">Suivant</a></li></ul>`;
+                        }
+                        var query = `SELECT * FROM products WHERE 1 ${color} ${tri} ${priceLimit} LIMIT ${productsPerPage} OFFSET ${offset} `;
+                        $.get(`http://localhost:8080/product-infos/${query}`, function(data){
+                            if(data.length != 0){
+                                const productArray = data;
+                                productArray.forEach(product => {
+                                    if(colorArray.includes(product.ColorDenomination) == false){
+                                        colorArray.push(product.ColorDenomination);
+                                    }
+                                    if(parseFloat(product.promo) !== 1){
+                                        var footer = `<div class="card-footer d-flex flex-row justify-content-between" ><span class="text-danger"><strong>-${100-parseFloat(product.promo)*100}%</strong></span><strong>${(product.price*parseFloat(product.promo)).toFixed(2)}€</strong></div>`;
+                                    }else{
+                                        var footer = `<div class="card-footer d-flex flex-row justify-content-end"><strong>${product.price}€</strong></div>`;
+                                    }
+                                    $(`<div class="card ProductCard" id="${product.id}""><img src='${JSON.parse(product.imageUrl)[0]}' class='card-img-top  border-bottom'><div class="card-body">${product.name}</div>${footer}</div>`).appendTo("#shop");
+                                });
+                            }
+                            if(status == false){
+                                colorArray.forEach(color => {
+                                    $(`<option value='${color}'>${color}</option>`).appendTo("#colorFilter")
+                                });
+                            }
+                            $(pagination).appendTo("#pagination");
+                        });
+                    }else{
+                        $("#pagination").removeClass("d-flex");
+                        $("#pagination").hide();
+                        $(`<h1>Il n'y a pas encore de produit correspondent à <strong>${q}</strong>!</h1>`).appendTo("#err");
+                    }
+                });
+                document.addEventListener('click', function(e){
+                    try{
+                        location = `product.html?id=${e.target.closest('.ProductCard').id}`;
+                    }catch (err){}
+                });
+            }else{
+                var color = '';
+                var tri = 'ORDER BY id ASC';
+                var priceLimit = '  ';
+                var colorArray = [];
+                $(".parameter").each(function(index){
+                    if(index == 0){
+                        if($(".parameter")[index].selectedIndex != 0){
+                            color = `AND ColorDenomination = '${$(".parameter")[index].value}'`;
+                        }
+                    }else if(index == 1){
+                        if($(".parameter")[index].selectedIndex != 0){
+                            tri = `ORDER BY ${$(".parameter")[index].value}`;
+                        }
+                    }else if(index == 2){
+                        if($("#minPrice").val() != ""){
+                            priceLimit = `AND price >= ${$("#minPrice").val()}`;
+                        }
+                        if($("#maxPrice").val() != ""){
+                            priceLimit += ` AND price <= ${$("#maxPrice").val()}`
+                        }
+                    }
+                })
+                if(urlParams.get('p') == null){var p = 0;}else{var p = parseInt(urlParams.get('p'));}
+                var offset = productsPerPage*p;
+                var pagination = `<ul class="pagination m-0">`;
+                    var query = `SELECT COUNT(*) FROM products WHERE 1 ${color} ${priceLimit} AND categorie LIKE '%25${q}%25' `;
+                    $.get(`http://localhost:8080/product-infos/${query}`, function(data){
+                        if(data[0]['COUNT(*)'] != 0){
+                            if(p > 0){
+                                pagination += `<li class="page-item"><a class="page-link" href="shop.html?q=${q}&p=${parseInt(p)-1}">Précédent</a></li>`;
+                            }else{
+                                pagination += `<li class="page-item disabled"><a class="page-link ">Précédent</a></li>`;
+                            }
+                            if(Math.round(data[0]['COUNT(*)']/productsPerPage) == 0){
+                                pagination += `<li class="page-item active disabled"><a class="page-link">1</a></li>`;
+                            }
+                            for(let i = 0;i <= Math.round(data[0]['COUNT(*)']/productsPerPage)-1;i++){
+                                if(i == p){
+                                    pagination += `<li class="page-item active"><a class="page-link" href="shop.html?q=${q}&p=${i}">${i+1}</a></li>`;
+                                }else{
+                                    pagination += `<li class="page-item"><a class="page-link" href="shop.html?q=${q}&p=${i}">${i+1}</a></li>`;
+                                }
+                            }
+                            if(p < Math.round(data[0]['COUNT(*)']/productsPerPage)-1){
+                                pagination += `<li class="page-item"><a class="page-link" href="shop.html?q=${q}&p=${(parseInt(p)+1)}">Suivant</a></li></ul>`;
+                            }else{
+                                pagination += `<li class="page-item disabled"><a class="page-link">Suivant</a></li></ul>`;
+                            }
+                            var query = `SELECT * FROM products WHERE 1  ${color} ${priceLimit} AND  categorie LIKE '%25${q}%25' ${tri} LIMIT ${productsPerPage} OFFSET ${offset} `;
+                            $.get(`http://localhost:8080/product-infos/${query}`, function(data){
+                                if(data.length != 0){
+                                    const productArray = data;
+                                    productArray.forEach(product => {
+                                        if(colorArray.includes(product.ColorDenomination) == false){
+                                            colorArray.push(product.ColorDenomination);
+                                        }
+                                        if(parseFloat(product.promo) !== 1){
+                                            var footer = `<div class="card-footer d-flex flex-row justify-content-between" ><span class="text-danger"><strong>-${100-parseFloat(product.promo)*100}%</strong></span><strong>${(product.price*parseFloat(product.promo)).toFixed(2)}€</strong></div>`;
+                                        }else{
+                                            var footer = `<div class="card-footer d-flex flex-row justify-content-end"><strong>${product.price}€</strong></div>`;
+                                        }
+                                        $(`<div class="card ProductCard" id="${product.id}""><img src='${JSON.parse(product.imageUrl)[0]}' class='card-img-top  border-bottom'><div class="card-body">${product.name}</div>${footer}</div>`).appendTo("#shop");
+                                    });
+                                }
+                                $(pagination).appendTo("#pagination");
+                                if(status == false){
+                                    colorArray.forEach(color => {
+                                        $(`<option value='${color}'>${color}</option>`).appendTo("#colorFilter")
+                                    });
+                                }
+                            });
+                        }else{
+                            $("#pagination").removeClass("d-flex");
+                            $("#pagination").hide();
+                            $(`<h1>Il n'y a pas encore de produit correspondent à <strong>${q}</strong>!</h1>`).appendTo("#err");
+                        }
+                    });
+                document.addEventListener('click', function(e){
+                    try{
+                        location = `product.html?id=${e.target.closest('.ProductCard').id}`;
+                    }catch (err){}
+                });
+            }
+        }
+    </script>
+
+    <style>
+        #shop {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-column-gap: 0.5rem;
+            grid-row-gap: 0.5rem;
+        }
+    </style>
+    
+</body>
+</html>
